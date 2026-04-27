@@ -28,6 +28,3 @@ El proyecto está construido siguiendo el patrón **MVC (Modelo-Vista-Controlado
 * **Frontend:** JavaScript (ES6+), SASS/CSS3, Swiper.js
 * **Gestión de Dependencias:** Composer, NPM
 * **Entorno:** Variables de entorno con `.env`
-
----
-*Desarrollado con enfoque en arquitectura limpia y seguridad.*

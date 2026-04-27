@@ -1,0 +1,32 @@
+// Fuentes
+$fuente_principal: serif;
+$fuente_titulos: 'Merriweather', serif;
+
+// Tamaño para los media queries
+$telefono: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$xl_desktop: 1200px;
+
+// Colores principales
+$color_principal: #3b3228;   // tinta marrón
+$color_secundario: #b49a67;  // dorado / pergamino
+$color_fondo: #fdfaf4;       // fondo cálido (papel)
+$color_texto: #2d2d2d;       // gris oscuro neutro
+
+// Colores secundarios
+$negro: #1a1b15;
+$blanco: #ffffff;
+$gris: #757575;
+$gris-claro: #f5f5f5;
+$gris-oscuro: #222222;
+
+$rojo: #b22222;   // errores
+$verde: #2e8b57;  // éxito
+$azul: blue;
+
+// Para editar el grosor de la fuente
+$delgada: 300;
+$regular: 400;
+$bold: 700;
+$black: 900;

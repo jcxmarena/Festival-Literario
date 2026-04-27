@@ -1,0 +1,11 @@
+USE proyectojavier;
+
+DROP TABLE IF EXISTS registros;
+DROP TABLE IF EXISTS eventos;
+DROP TABLE IF EXISTS libros;
+DROP TABLE IF EXISTS escritores;
+DROP TABLE IF EXISTS localizaciones;
+DROP TABLE IF EXISTS categorias;
+DROP TABLE IF EXISTS editoriales;
+DROP TABLE IF EXISTS usuarios;
+DROP TABLE IF EXISTS roles;

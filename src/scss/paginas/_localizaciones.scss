@@ -1,0 +1,70 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.localizaciones {
+  &__grid {
+    @include m.contenedor;
+    @include m.grid(1, 5rem);
+
+    @include m.tablet {
+      @include m.grid(2, 5rem);
+    }
+
+    @include m.xl_desktop {
+      @include m.grid(3, 5rem);
+    }
+  }
+}
+
+.localizacion {
+  @include m.card;
+
+  // Si quieres forzar que el contenido no “salte”, puedes usar grid interno
+  display: grid;
+  gap: 1.5rem;
+
+  &__nombre {
+    font-weight: 700;
+    font-size: clamp(1.6rem, 1.4rem + .4vw, 2rem);
+    line-height: 1.2;
+  }
+
+  &__direccion {
+    color: v.$gris;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    line-height: 1.5;
+
+    i {
+      margin-right: .6rem;
+    }
+  }
+
+  // 🔎 Mapa responsivo
+  &__mapa {
+    width: 100%;
+    // Mantiene proporción sin calcular alturas manuales
+    aspect-ratio: 16/10;
+
+    // Asegura altura mínima cómoda en móvil (similar a tu imagen min-width: 350px)
+    min-height: 350px;
+
+    // En pantallas más grandes, podemos ajustar un poco
+    @include m.tablet {
+      min-height: 300px;
+    }
+    @include m.xl_desktop {
+      min-height: 260px;
+    }
+
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  }
+}
+
+/* Recomendado: asegura que Leaflet ocupe todo el contenedor */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}

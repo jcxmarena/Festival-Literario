@@ -1,0 +1,8 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.entradas {
+  &__heading { margin: 1rem 0 .5rem; }
+  &__descripcion { color: v.$gris; margin-bottom: 2rem; }
+
+}

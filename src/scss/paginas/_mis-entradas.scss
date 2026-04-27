@@ -1,0 +1,64 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.mis-entradas {
+  &__heading { margin: 1rem 0 .5rem; }
+  &__descripcion { color: v.$gris; margin-bottom: 2rem; }
+
+  &__vacio {
+    @include m.contenedor;
+    @include m.card;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    color: v.$gris;
+    i { font-size: 3rem; }
+    a { text-decoration: underline; }
+  }
+
+  &__lista {
+    @include m.contenedor;
+    display: grid;
+    gap: 1.2rem;
+  }
+}
+
+.entrada {
+  @include m.card;
+  display: grid;
+  gap: 1rem;
+
+  @include m.tablet {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  &__titulo {
+    font-weight: 700;
+    font-size: clamp(1.6rem, 1.4rem + .4vw, 2rem);
+    line-height: 1.2;
+    margin-bottom: .4rem;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem 1.2rem;
+    color: v.$gris;
+
+    span { display: inline-flex; align-items: center; gap: .5rem; }
+  }
+
+  &__acciones {
+    display: flex;
+    justify-content: flex-start;
+
+    @include m.tablet {
+      justify-content: flex-end;
+    }
+  }
+
+  &__boton {
+      @include m.boton(v.$rojo, v.$blanco);
+    }
+}
